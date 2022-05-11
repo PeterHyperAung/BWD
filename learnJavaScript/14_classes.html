@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let myself = {
+        // properties
+        name: "Min Phone Aung",
+        age: 15,
+        gf: "Jennie",
+        skill: "Web Development",
+
+        // methods
+        teach() {
+          return this.name + " teach " + this.skill;
+        },
+
+        showBdYear() {
+          return `${this.name} was born in ${2022 - this.age}`;
+        },
+      };
+
+      class Myself {
+        constructor(name) {
+          // console.log("I'm constructor");
+          this.name = name;
+        }
+        // properties
+        static age = 15;
+        gf = "Jennie";
+        skill = "Web Development";
+
+        teach() {
+          return this.name + " can teach";
+        }
+
+        showBdYear() {
+          return "I was born in 2006";
+        }
+      }
+
+      // let myself2 = new Myself("bbb", "ccc"); // instantiate (class -> obj)
+      // console.log(myself2.name);
+      // console.log(myself2.gf);
+      // console.log(myself2.showBdYear());
+
+      class Student {
+        constructor(name, age, phone) {
+          this.name = name;
+          this.age = age;
+          this.phone = phone;
+        }
+        learn() {
+          return this.name + " can learn";
+        }
+      }
+
+      let student1 = new Student("Mg Mg", 18, "09123133");
+      let student2 = new Student("Kyaw Kyaw", 15, "0934234234");
+      let student3 = new Student("Zaw Zaw", 13, "0923452345");
+      let student4 = new Student("Su Su", 21, "097897454");
+    </script>
+  </body>
+</html>

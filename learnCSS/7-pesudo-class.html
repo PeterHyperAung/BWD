@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Class</title>
+    <style>
+      .box {
+        width: 500px;
+        border: 2px solid black;
+        margin: 100px auto;
+        padding: 10px;
+        transition: all 0.5s;
+      }
+
+      .box:hover {
+        background-color: #0096b1;
+        color: #f1f1f1;
+      }
+      .box:active {
+        background-color: dodgerblue;
+      }
+      /* .textarea:focus {
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur
+        odio facere officiis, debitis perferendis ea est possimus nesciunt
+        quibusdam tempora maxime.
+      </p>
+    </div>
+    <textarea name="" id="" cols="30" rows="30"> </textarea>
+  </body>
+</html>

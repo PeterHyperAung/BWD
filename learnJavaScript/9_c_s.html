@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function run() {
+        console.log("I'm run 1");
+        console.log("I'm run 2");
+        console.log("I'm run 3");
+      }
+
+      let condition = false;
+
+      if (condition) {
+        console.log("I'm run 1");
+        console.log("I'm run 2");
+        console.log("I'm run 3");
+      } else {
+        console.log("I'm false");
+      }
+
+      let wakeUpTime = 10;
+
+      if (wakeUpTime > 8) {
+        console.log("Mom will hit you");
+      } else {
+        console.log("it is ok");
+      }
+
+      let money = 500;
+
+      if (money >= 200) {
+        console.log("Go to school by bus");
+        money -= 200;
+      } else {
+        console.log("Go to school on foot");
+      }
+
+      console.log("Balance = ", money);
+
+      let requestMoney = 300;
+
+      if (requestMoney > 1000) {
+        console.log("Go to shool");
+
+        if (requestMoney >= 200) {
+          console.log("Go to school by bus");
+          requestMoney -= 200;
+        } else {
+          console.log("Go to school on foot");
+        }
+
+        console.log("Balance = ", requestMoney);
+      } else {
+        console.log("Don't go to school. Sulk ");
+      }
+
+      let busNo = 65;
+
+      if (busNo === 65) {
+        console.log(`Go to school by Bus No.${busNo}`);
+      } else if (busNo === 20) {
+        console.log(`Go to school by Bus No.${busNo}`);
+      } else {
+        console.log(`Go to school by Bus No.${busNo}`);
+      }
+
+      let mark = 65;
+
+      if (mark < 40) {
+        console.log("Fail the exam");
+      } else if (mark >= 80) {
+        console.log("Pass with distinction");
+      } else if (mark >= 40) {
+        console.log("Pass the exam");
+      }
+    </script>
+  </body>
+</html>

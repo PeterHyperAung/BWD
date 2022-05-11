@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More About Function</title>
+  </head>
+  <body>
+    <script>
+      let name = "hein htet zan";
+
+      console.log(aa());
+      // console.log(run()); // error
+      // console.log(a); // error
+      // console.log(b); // no error but value is undefined
+
+      // function statement
+      function aa() {
+        console.log(name);
+        return "this is aa";
+      }
+
+      // function expression
+      const run = function () {
+        return aa() + " this is run";
+      };
+
+      // IIFE
+      (function () {
+        console.log("this is IIFE");
+      })();
+
+      console.log(run());
+
+      let a = "I'm a";
+      let b = "I'm b";
+
+      function cc() {
+        // local scope variables
+        console.log(a);
+        console.log(b);
+        console.log(name);
+      }
+    </script>
+  </body>
+</html>

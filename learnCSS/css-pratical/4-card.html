@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <style>
+      * {
+        font-family: "Montserrat", sans-serif;
+        box-sizing: border-box;
+      }
+
+      body {
+        padding: 10px;
+        background-color: #f4f4f4;
+      }
+
+      .card {
+        width: 300px;
+        border-radius: 10px;
+        display: inline-block;
+        overflow: hidden;
+        margin: 10px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      }
+
+      .card-title {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .card-body {
+        padding: 10px;
+      }
+
+      .card-paragraph {
+        color: #444;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .text-right {
+        text-align: right;
+      }
+      .card-img {
+        width: 100%;
+        display: block;
+      }
+
+      .no-Tpadding {
+        padding: 0 10px 10px;
+      }
+
+      .card-icon {
+        font-size: 60px;
+        color: #b564b3;
+        margin: 12px 0;
+      }
+
+      .add-to-cart {
+        background-color: black;
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        margin-left: auto;
+        display: block;
+        margin-top: -20px;
+        position: relative;
+        margin-right: 10px;
+      }
+      .bg {
+        background-image: url(../img/texture-1.jpg);
+      }
+
+      .see-more {
+        background-color: black;
+        color: white;
+        width: 150px;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        display: block;
+        margin: auto;
+        margin-bottom: -20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-body">
+        <p class="card-title">Card Design 1</p>
+        <p class="card-paragraph">
+          Lorem ipsum dolor sit amet onsectetur elit consectetur elit.
+          Voluptatem in modi.
+        </p>
+      </div>
+    </div>
+
+    <div class="card text-center">
+      <div class="card-body">
+        <p class="card-title">Card Design 2</p>
+        <p class="card-paragraph">
+          Lorem ipsum dolor sit amet onsectetur elit consectetur elit.
+          Voluptatem in modi.
+        </p>
+      </div>
+    </div>
+
+    <div class="card text-right">
+      <div class="card-body">
+        <p class="card-title">Card Design 3</p>
+        <p class="card-paragraph">
+          Lorem ipsum dolor sit amet onsectetur elit consectetur elit.
+          Voluptatem in modi.
+        </p>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+
+    <div class="card">
+      <img src="../img/jennie3.jpg" alt="" class="card-img" />
+      <div class="card-body no-Tpadding">
+        <p class="card-title">My Girlfriend</p>
+        <p class="card-paragraph">
+          Lorem ipsum dolor sit amet onsectetur elit consectetur elit.
+          Voluptatem in modi.
+        </p>
+      </div>
+    </div>
+
+    <div class="card text-center bg" style="overflow: visible">
+      <div class="card-body">
+        <i class="fas fa-home card-icon"></i>
+        <p class="card-title">Card Design</p>
+        <p class="card-paragraph">
+          Lorem ipsum dolor sit amet onsectetur elit consectetur elit.
+          Voluptatem in modi.
+        </p>
+      </div>
+      <button class="see-more">See More</button>
+    </div>
+
+    <div class="card">
+      <img src="../img/macbook.jpg" alt="" class="card-img" />
+      <button class="add-to-cart">
+        <i class="fas fa-plus"></i>
+      </button>
+      <div class="card-body no-Tpadding">
+        <p class="card-title">New Macbook</p>
+        <p class="card-paragraph">
+          Lorem ipsum dolor sit amet onsectetur elit consectetur elit.
+          Voluptatem in modi.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

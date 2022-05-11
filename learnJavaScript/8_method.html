@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Method</title>
+  </head>
+  <body>
+    <script>
+      // property
+
+      function myTest() {
+        console.log(this); // return window object
+      }
+      let myself = {
+        name: "hein htet zan",
+        age: 27,
+        skill: ["html", "css", "JavaScript"],
+
+        // method
+        test: function () {
+          return "this is method";
+        },
+
+        // method es6
+        run(para) {
+          return "This is method ------ " + para;
+        },
+
+        showAll() {
+          console.log(this); // return current object
+          return `My name is ${this.name} and I'm ${
+            this.age
+          } years old ---- ${this.test()}`;
+        },
+      };
+
+      // Method
+    </script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      (function () {
+        console.log("this is IIFE");
+      })();
+
+      run();
+
+      // fun statement
+      function run() {
+        console.log("this is run");
+        return "this is run";
+      }
+
+      // fun expression
+      function toRun() {
+        console.log("this is toRun");
+        return "this is toRun";
+      }
+
+      toRun();
+
+      if (false) {
+        console.log("this is true");
+      } else {
+        console.log("this is false");
+      }
+
+      true ? console.log("this is true") : console.log("this is false");
+
+      let x = `this is ${true ? "a" : "b"}`;
+      console.log(`this is ${x}`);
+
+      let y = `this is ${(function () {
+        let a = 5;
+        let b = 6;
+        return a + b;
+      })()}`;
+      console.log(y);
+
+      let z = 5;
+      let test = `this is ${z++}`;
+      console.log(test);
+
+      let txt =
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi debitis amet perspiciatis atque. Veniam, maxime, ullam perspiciatis nobis dignissimos accusamus cum incidunt qui, itaque soluta animi aliquam vel nesciunt molestias?";
+
+      let test2 = `this is ${txt.split(" ").join("-").toUpperCase()}`;
+      console.log(test2);
+    </script>
+  </body>
+</html>

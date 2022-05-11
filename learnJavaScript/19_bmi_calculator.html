@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google font api -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>BMI calculator</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        font-family: "Lato", sans-serif;
+      }
+      /* heading */
+      h1 {
+        text-align: center;
+        background-color: dodgerblue;
+        padding: 10px 0;
+      }
+
+      /* container */
+      form {
+        width: 20rem;
+        height: 350px;
+        background-color: #f1f1f1;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin-top: 160px;
+      }
+
+      /* container body */
+      .container {
+        padding: 10px;
+      }
+      /* input and label */
+      input {
+        width: 100%;
+        padding: 5px 10px;
+        font-size: 1rem;
+      }
+      label {
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+
+      .input-group {
+        margin: 15px 0 25px 0;
+      }
+
+      /* buttons */
+      /* btn group in container */
+      .btn-group {
+          text-align: center;
+      }
+      /* calculate and clear buttons */
+      #calculate,
+      #clear {
+        font-size: 1.1rem;
+        padding: 0.5rem;
+        border-radius: 5px;
+        border: none;
+        background-color: dodgerblue;
+        color: white;
+      }
+
+      #clear{
+        background-color: #ff2b55;
+      }
+
+      #calculate:active {
+        background-color: #1d7edf;
+      }
+     
+      #clear:active{
+        background-color: #da2347;
+      }
+     /* add to list button*/
+      #add-to-list{
+        border: none;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        width: 20rem;
+        background-color: #f6f6f6;
+        padding: 15px 0;
+        margin: 20px 0;
+        font-size: 1.1rem;
+        text-align: left;
+      }
+
+      i{
+        font-size: 1.2rem;
+        margin: 0 10px;
+      }
+
+      /* result */
+      .result-container {
+        margin-bottom: 15px;
+      }
+
+      
+      /* list */
+      ul{
+          text-align: left;
+          width: 15rem;
+      }
+      ul li{
+          margin: 7px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+        <!-- Heading -->
+      <h1>BMI calculator</h1>
+      <!-- calculator body part -->
+      <div class="container">
+          <!-- weight input and label group -->
+        <div class="weight input-group">
+            <!-- label -->
+          <label for="weight">Weight</label> <br />
+          <!-- input -->
+          <input
+            type="number"
+            name="weight"
+            id="weight"
+            placeholder="Weight in Kilogram"
+          />
+        </div>
+          <!-- height input and label group-->
+        <div class="height input-group">
+            <!-- label -->
+          <label for="height">Height</label> <br />
+          <!-- input -->
+          <input
+            type="number"
+            name="height"
+            id="height"
+            placeholder="Height in Meter"
+          />
+        </div>
+
+        <!-- displaying result section -->
+        <div class="result-container">
+          <span>Result : </span><span id="result"></span> 
+        </div>
+
+        <!-- buttons inside calculator -->
+        <div class="btn-group">
+            <!-- calculate button -->
+            <button id="calculate" type="button" onclick="calc();">
+              Calculate
+            </button>
+            <!-- clear button -->
+            <button id="clear" type="button" onclick="clearResult();">Clear</button>
+        </div>
+    </div>
+    </form>
+    <!-- list -->
+    <ul id="list"></ul>
+
+    <!-- adding to list button -->
+    <button type="button" id="add-to-list"  onclick="addToList();"><i class="fa-fw fa-solid fa-circle-plus"></i>Add To List</button>
+
+        <script>
+          // selection
+          let btn = document.getElementById("calculate");
+          let weight = document.getElementById("weight");
+          let height = document.getElementById("height");
+          let result = document.getElementById("result");
+          let add = document.getElementById("add-to-list");
+          let ul = document.getElementById("list");
+
+
+          // Functions
+
+          // calculation function
+          function calc() {
+              if(weight.value === "" || height.value === ""){
+                window.alert("Please enter both width and height")
+              }
+              else{
+            result.innerHTML = `${weight.value}kg ÷ ${height.value}m = ${(
+              Number(weight.value).toFixed(2) / Math.pow(height.value, 2).toFixed(2)
+            ).toFixed(2)}`;
+            weight.value = '';
+              height.value = '';
+              }   
+          }
+
+          /// result clearing function
+          function clearResult(){
+            result.innerHTML = '';
+          }
+
+          
+          // adding to list function
+          function addToList(){
+              if(result.innerHTML ===  ""){
+                    window.alert("Please calculate first")
+              }else{
+                ul.innerHTML += `<li>${result.innerHTML}</li>`;
+               ul.style.marginTop = "20px";
+               clearResult();
+             }             
+          }
+        </script>
+      </div>
+    </form>
+  </body>
+</html>

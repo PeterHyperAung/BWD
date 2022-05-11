@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // string
+
+      let name = "Min Phone Aung";
+      let trm = "      hello      ";
+      let text =
+        "Lorem, ipsum dolor sit amet consectetur adipisicing dolor elit. Harum aliquid numquam deleniti? dolor Similique, debitis";
+
+      let str = new String("hello");
+      console.log(str, typeof str);
+      console.log(name.length);
+      console.log(name[0]);
+      console.log(name.substr(0, 3));
+      console.log(name.search("Phone"));
+      // case sensitive
+      console.log(name.search("phone"));
+      console.log(name.search("Min"));
+      console.log(name.replace("Min", "Peter"));
+      // replacing all (global)
+      console.log(text.replace(/dolor/g, "abc"));
+      // case insensitive
+      console.log(text.replace(/DOLOR/i, "abc"));
+      console.log(str.toUpperCase());
+      console.log(str.toLowerCase());
+      console.log(trm.trim());
+
+      let a = "5";
+      console.log(a.padStart(10, "0"));
+      console.log(a.padEnd(10, "0"));
+      console.log(a);
+
+      console.log(trm.trim());
+
+      let nameArr = name.split(" ");
+      console.log(nameArr);
+
+      nameArr = name.split("");
+      console.log(nameArr);
+
+      let textArr = text.split(" ");
+      console.log(textArr.length);
+
+      // number
+      let num = new Number(10);
+      console.log(num, typeof num);
+      let age = 26;
+      let myBtc = 2.47295023;
+      let weight = "180.46lb";
+      let money = "1815";
+
+      console.log(age.toString());
+      console.log(myBtc.toFixed(3));
+      console.log(myBtc.toPrecision(3));
+      console.log(parseFloat(weight));
+      console.log(parseInt(money));
+      console.log(Math.random());
+      console.log(Math.trunc(Math.random() * 10 + 1));
+      console.log(Math.floor(myBtc)); // -1
+      console.log(Math.ceil(myBtc)); // + 1
+
+      // array
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      console.log(fruits.length);
+      console.log(fruits.toString());
+      console.log(fruits.join(" "));
+      fruits.push("Pineapple");
+      console.log(fruits);
+      fruits.unshift("Peach");
+      console.log(fruits);
+      fruits.pop();
+      console.log(fruits);
+      fruits.shift();
+      console.log(fruits);
+      fruits.sort();
+      console.log(fruits);
+      fruits.reverse();
+      console.log(fruits);
+      // object
+      let me = {
+        name: "Min Phone Aung",
+        age: 26,
+        skill: ["html", "css", "js"],
+        haveGirlFriend: false,
+      };
+      console.log(Object.keys(me));
+      console.log(Object.values(me));
+    </script>
+  </body>
+</html>

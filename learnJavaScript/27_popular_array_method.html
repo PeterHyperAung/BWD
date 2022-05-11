@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popular Array Method</title>
+  </head>
+  <body>
+    <script src="./js/shop.js"></script>
+    <script>
+      let fruits = ["Banana", "Orange", "Apple", "Mango", "Lemon", "kiwi"];
+      let marks = [40, 65, 78, 34, 90, 19];
+      // console.log(Array.isArray(fruits));
+
+      // case sensitive
+      // console.log(fruits.includes("Apple"));
+      // console.log(fruits.includes("apple"));
+
+      // case sensitive
+      // console.log(fruits.indexOf("Apple"));
+      // console.log(fruits.indexOf("apple"));
+
+      // console.log(fruits.splice(2, 2, "aaa", "bbb"));
+      // console.log(fruits);
+
+      // console.log(fruits.concat(marks));
+
+      fruits.map(function (element, index) {
+        console.log(index, element);
+      });
+
+      let newArr = fruits.map(function (element, index) {
+        return element + " - " + element.length;
+      });
+
+      console.log(newArr);
+
+      let newArr2 = marks.map(function (el) {
+        return el >= 40 ? `${el} pass` : `${el} fail`;
+      });
+
+      console.log(newArr2);
+
+      let newArr3 = shop.map(function (el) {
+        console.log(el.title + " - " + el.price);
+        return el.title + " - " + el.price;
+      });
+      // console.table(newArr3);
+      // console.table(shop);
+
+      let newArr4 = fruits.filter(function (el) {
+        console.log(el, el.length);
+        return el.length === 5;
+      });
+
+      console.log(newArr4);
+
+      let newArr5 = shop.filter(function (el) {
+        return el.price > 150;
+      });
+
+      console.table(newArr5);
+
+      let newArr6 = fruits.find(function (el) {
+        // console.log(el);
+        return el.length === 5;
+      });
+
+      console.log(newArr6);
+
+      let newArr7 = fruits.find(function (el) {
+        // console.log(el);
+        return el.length === 14;
+      });
+
+      console.log(newArr7);
+
+      let newArr8 = shop.find(function (el) {
+        return (el.id = 3);
+      });
+
+      console.log(newArr8);
+
+      let newArr9 = fruits.reduce(function (previousValue, currentValue) {
+        console.log(previousValue + " - " + currentValue);
+        return previousValue + currentValue;
+      }, "0");
+
+      console.log(newArr9);
+
+      let newArr10 = marks.reduce(function (p, c) {
+        console.log(p + " - " + c);
+        return p + c;
+      }, 0);
+
+      console.log(newArr10);
+
+      let newArr11 = shop.reduce(function (p, c) {
+        console.log(p + " - " + c.price);
+        return p + c.price;
+      }, 0);
+      console.log(newArr11);
+
+      let newArr12 = marks.some(function (el) {
+        console.log(el);
+        return el > 40;
+      });
+
+      console.log(newArr12);
+
+      let newArr13 = marks.every(function (el) {
+        console.log(el);
+        return el > 40;
+      });
+
+      console.log(newArr13);
+
+      let newArr14 = fruits
+        .filter(function (el) {
+          return el.length > 4;
+        })
+        .join("-");
+
+      console.log(newArr14);
+    </script>
+  </body>
+</html>

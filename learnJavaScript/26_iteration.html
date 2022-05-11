@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <h1>Min Ga Lar Par</h1>
+    <h1>hein htet zan</h1>
+    <h1>san kyi tar</h1>
+    <h1>hello</h1>
+    <script>
+      // array
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+      for (let i = 0; i < fruits.length; i++) {
+        console.log(i, fruits[i]); // index
+      }
+
+      for (let fruit of fruits) {
+        console.log(fruit); // index
+      }
+
+      let ul = document.createElement("ul");
+
+      fruits.forEach(function (i, index, array) {
+        console.log(i, index, array);
+        let li = document.createElement("li");
+        let text = document.createTextNode(i);
+        li.append(text);
+        ul.append(li);
+      });
+
+      document.body.prepend(ul);
+
+      let allH1 = document.querySelectorAll("h1");
+
+      // allH1.forEach
+
+      let h1Arr = [];
+
+      allH1.forEach(function (i) {
+        h1Arr.push(i.innerText);
+      });
+      console.log(h1Arr);
+    </script>
+  </body>
+</html>

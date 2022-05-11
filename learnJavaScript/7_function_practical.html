@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Practical</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      // Practical 1
+      /*
+      let record = []; // to store result
+      let index = 0;
+
+      function saveRecord(width, breath, result){
+        record[index] = { width, breath, result };
+        index++;
+      }
+
+      function calcArea(width, breath) {
+        let result = width * breath + " square feet";
+        saveRecord(width, breath, result);
+        return result;
+      }
+       */
+
+      // Practical 2
+      // money exchange rates
+      /*
+      let rates = {
+        usd: 1636,
+        eur: 1933,
+        sgd: 1208,
+      };
+
+      function exchangeToMmk(amount, currency){
+        return amount * rates[currency] + " mmk";
+      }
+
+      function exchangeFromMmk(amount, currency){
+        return amount / rates[currency] + " " + currency;
+      }
+     */
+
+      // Practical 3
+      // fruit price
+      let fruitPrice = {
+        orange: 100,
+        mango : 250,
+        apple: 70
+      };
+
+      function calcTax(amount, percentage = 5){
+          return (amount * percentage)/ 100;
+      }
+
+      function calcCost(quantity, fruit){
+          let calc = quantity * fruitPrice[fruit];
+          let result = calc + " mmk";
+          return {
+            name : fruit,
+            unitPrice: fruitPrice[fruit],
+            quantity,
+            cost: calc,
+            tax: calcTax(calc),
+            total: calc + calcTax(calc)
+          };
+      }
+
+      
+    </script>
+  </body>
+</html>

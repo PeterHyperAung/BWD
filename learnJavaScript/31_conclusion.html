@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css">
+  </head>
+  <body>
+    <h1>Min Ga Lar Par <i class="fa fa-home"></i></h1>
+    <p class="animate__animated animate__bounce">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe impedit consectetur cupiditate quis molestiae, esse, magnam veritatis reprehenderit officiis omnis blanditiis non assumenda voluptatibus. Aperiam animi aliquam ipsa tempore adipisci?
+    </p>
+    
+    <script>
+      let arr1 = [1, 2, 3];
+      let arr2 = ["a", "b", "c"];
+
+      function run(x, y, z) {
+        return x + y + z;
+      }
+
+      function test(x, y) {
+        return x + y;
+      }
+      
+      let result = [...arr1, "abc", ...arr2, ...arr1];
+      console.log(result);
+
+      console.log(run(...arr1));
+
+      console.log(test(..."min ga lar par"));
+
+      localStorage.setItem("name", "Min Phone Aung");
+      localStorage.setItem("age", 15);
+      console.log(localStorage.getItem("name"));
+      console.log(localStorage.getItem("age"));
+
+      // navigator.geolocation.getCurrentPosition((position) => {
+      //   console.log(position);
+      // });
+
+      // not function date undefined
+      let myJson = '{"name": "Min Phone Aung", "age": 27, "skill": ["html", "css", "js"]}';
+      let parse = JSON.parse(myJson);
+      console.log(myJson)
+      console.log(typeof myJson)
+      console.log(parse);
+      console.log(typeof parse);
+
+      console.log(JSON.stringify(parse));
+      console.log(typeof JSON.stringify(parse));
+  
+      fetch("https://fakestoreapi.com/products")
+        .then(response => response.json())
+        .then(data => console.log(data));
+
+    </script>
+  </body>
+</html>

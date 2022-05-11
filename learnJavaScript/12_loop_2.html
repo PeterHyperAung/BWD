@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Looping Arrays and Objects</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let fruits = ["apple", "orange", "mango", "banana", "lemon"];
+      let marks = [37, 42, 54, 89, 60, 30];
+      let myInfo = {
+        name: "Min Phone Aung",
+        age: 15,
+        relationshipStatus: "single",
+        job: "dev",
+        liveIn: "Pazundaung",
+      };
+
+      for (i = 0; i < fruits.length; i++) {
+        console.log("I like " + fruits[i]);
+      }
+
+      console.log(i);
+
+      let total = 0;
+      for (let i = 0; i < marks.length; i++) {
+        total += marks[i];
+      }
+      console.log(total);
+
+      total = 0;
+      for (let mark of marks) {
+        console.log((total += mark));
+      }
+
+      for (fruit in fruits) {
+        console.log(fruit, " : ", fruits[fruit]);
+      }
+
+      for (let x in myInfo) {
+        console.log(x + " : " + myInfo[x]);
+      }
+    </script>
+  </body>
+</html>

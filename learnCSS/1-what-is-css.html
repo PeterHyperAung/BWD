@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS sample</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+
+      .box {
+        margin: 100px auto 0 auto;
+        width: 350px;
+        border: 1px solid #ccc;
+        padding: 35px 20px;
+        text-align: center;
+      }
+
+      .box > img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 20px;
+      }
+
+      .box .name {
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .box p {
+        margin-bottom: 20px;
+      }
+      .box a {
+        text-decoration: none;
+        background: #fd5949;
+        color: #f1f1f1;
+        width: 120px;
+        height: 50px;
+        line-height: 50px;
+        display: inline-block;
+        border-radius: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img src="./img/jennie.jpg" alt="200" width="200" />
+      <p class="name">Jennie Kim</p>
+      <p class="des">
+        Lorem ipsum dolor sit amet
+        <br />
+        consectetur adipisicing elit
+        <br />
+        Rerum iusto quis eius culpa
+        <br />
+        voluptatem fugit atque excepturi.
+      </p>
+
+      <a href="https://www.instagram.com/jennierubyjane">Instagram</a>
+    </div>
+  </body>
+</html>

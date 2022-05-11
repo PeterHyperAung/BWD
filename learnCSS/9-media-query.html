@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: skyblue;
+      }
+
+      p {
+        border: 1px solid black;
+        display: inline-block;
+        width: 33%;
+      }
+
+      @media screen and (max-width: 1024px) {
+        body {
+          background-color: pink;
+        }
+        p {
+          width: 50%;
+        }
+        p:last-child {
+          width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        body {
+          background-color: white;
+        }
+        p {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt tenetur
+      blanditiis sapiente ut cum earum repellat vero porro provident quis illum
+      similique eveniet iusto maiores necessitatibus libero nihil, magnam sed,
+      sint tempore corrupti, nobis modi aliquid! Aspernatur quia voluptatum
+      eveniet, quisquam distinctio voluptatibus asperiores reiciendis explicabo
+      molestiae voluptates eius laborum, perferendis officia, exercitationem
+      excepturi beatae itaque quas. Neque, excepturi nihil tempore quisquam
+      libero quia tempora voluptate quas itaque maxime ab? Rem ut dolor eligendi
+      voluptatem quisquam iusto mollitia rerum quasi quas, quis illum fugiat
+      dolorum dignissimos laudantium voluptatum non eos minus libero, nihil ad
+      sit? Aliquid eaque eveniet consequuntur sunt.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt tenetur
+      blanditiis sapiente ut cum earum repellat vero porro provident quis illum
+      similique eveniet iusto maiores necessitatibus libero nihil, magnam sed,
+      sint tempore corrupti, nobis modi aliquid! Aspernatur quia voluptatum
+      eveniet, quisquam distinctio voluptatibus asperiores reiciendis explicabo
+      molestiae voluptates eius laborum, perferendis officia, exercitationem
+      excepturi beatae itaque quas. Neque, excepturi nihil tempore quisquam
+      libero quia tempora voluptate quas itaque maxime ab? Rem ut dolor eligendi
+      voluptatem quisquam iusto mollitia rerum quasi quas, quis illum fugiat
+      dolorum dignissimos laudantium voluptatum non eos minus libero, nihil ad
+      sit? Aliquid eaque eveniet consequuntur sunt.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt tenetur
+      blanditiis sapiente ut cum earum repellat vero porro provident quis illum
+      similique eveniet iusto maiores necessitatibus libero nihil, magnam sed,
+      sint tempore corrupti, nobis modi aliquid! Aspernatur quia voluptatum
+      eveniet, quisquam distinctio voluptatibus asperiores reiciendis explicabo
+      molestiae voluptates eius laborum, perferendis officia, exercitationem
+      excepturi beatae itaque quas. Neque, excepturi nihil tempore quisquam
+      libero quia tempora voluptate quas itaque maxime ab? Rem ut dolor eligendi
+      voluptatem quisquam iusto mollitia rerum quasi quas, quis illum fugiat
+      dolorum dignissimos laudantium voluptatum non eos minus libero, nihil ad
+      sit? Aliquid eaque eveniet consequuntur sunt.
+    </p>
+  </body>
+</html>

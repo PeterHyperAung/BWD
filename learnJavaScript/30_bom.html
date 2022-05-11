@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 3000px;
+      }
+      img {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="clearInterval(myControl);">Stop 1</button>
+    <button onclick="clearTimeout(myControl);">Stop 2</button>
+
+    <button onclick="history.forward()">Forward</button>
+    <button onclick="history.backward()">Backward</button>
+    <!-- <img src="https://p16-va-tiktok.ibyteimg.com/img/musically-maliva-obj/1666115113714694~c5_720x720.jpeg" alt="">
+    <img src="https://1.bp.blogspot.com/-VkgNIbkeg9c/XSNSx0tSucI/AAAAAAAApQA/ozSaLlRE7VgB-8QNCrVczZFzyd8kPAs4QCLcBGAs/s1600/65862753_3347651068585809_5522628206584135680_n.jpg" alt=""> -->
+    <script>
+      console.log(innerWidth);
+      console.log(innerHeight);
+      console.log(outerWidth);
+      console.log(outerHeight);
+      console.log(pageYOffset);
+
+      window.addEventListener("scroll", () => {
+        console.log(pageYOffset);
+      });
+
+      window.addEventListener("resize", () => {
+        console.log(innerWidth, innerHeight);
+      });
+
+      window.addEventListener("load", () => {
+        console.log("loading finish");
+      });
+
+      console.log("a");
+      console.log("b");
+      console.log("cw");
+
+      // alert("hello");
+      // console.log(confirm("Are u sure ?"));
+      // console.log(prompt("Say something"));
+
+      // open();
+      // close();
+
+      function run() {
+        console.log("this is run");
+      }
+
+      setTimeout(run, 3000);
+      let myControl = setInterval(run, 1000);
+
+      console.log(window.document);
+      console.log(window.console);
+
+      console.log(window.screen);
+      console.log(screen);
+
+      // orientation
+      console.log(screen.orientation);
+      console.log(screen.orientation.type);
+
+      console.log(location);
+      console.log(location.protocol);
+      console.log(location.href);
+      // console.log(location.reload());
+      console.log(location.pathname);
+      // console.log((location.href = "https://www.google.com"));
+      // console.log(history.backward());
+      // console.log(history.forward());
+
+      console.log(window.navigator);
+      // vibrating phone with navigator
+      // console.log(navigator.vibrate(300));
+
+      console.log(navigator.geolocation);
+    </script>
+  </body>
+</html>

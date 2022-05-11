@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="header">Min Ga Lar Par</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, non
+      fuga. Voluptatum aliquid sapiente saepe libero adipisci, molestiae ut
+      tenetur assumenda repellat excepturi perspiciatis, quidem nam voluptas
+      accusantium commodi nihil nemo magni aspernatur amet. Laudantium porro
+      veniam aliquam officia dolorum totam minus, incidunt placeat itaque dicta
+      quas? Quam, alias praesentium.
+    </p>
+    <p>This is paragraph</p>
+
+    <input type="text" name="" id="inputText" />
+    <button onclick="changeHeader();">Click Me Once</button>
+    <button ondblclick="changeHeader();">Click Me Twice</button>
+
+    <ul id="list">
+      <li class="list-item">Apple</li>
+      <li class="list-item">Orange</li>
+      <li class="list-item">Mango</li>
+      <li class="list-item">Banana</li>
+    </ul>
+
+    <script>
+      // console.log(window);
+      // console.log(window.document);
+      // console.log(window.console);
+
+      // window input text
+      // let name = window.prompt("What is Your Name ?");
+
+      // window output text
+      // window.alert(name);
+      // console.log(name);
+
+      // let x = window.confirm("Have you eaten?");
+      // console.log(x);
+
+      // document.write(
+      //   `<h1> ${x ? "Yes, I have eaten" : "No, I haven't eaten"} </h1>`
+      // );
+
+      // let inputText = prompt("Say Somethings");
+
+      // let h = document.getElementById("header");
+
+      // console.log(h.innerHTML);
+      // console.log(h.innerText);
+
+      // h.innerText = inputText;
+
+      // input from window -> output from document
+      // 1. request data from input
+      // 2. write , click ok button
+      // 3. add the text in h1
+
+      let i = document.getElementById("inputText");
+      let h = document.getElementById("header");
+
+      function changeHeader() {
+        let inputText = i.value;
+        h.innerText = inputText;
+      }
+
+      let liTag = document.getElementsByTagName("li");
+      let liClass = document.getElementsByClassName("list-item");
+      console.log(liTag[0]);
+      console.log(liClass[1]);
+
+      let ul = document.getElementById("list");
+      console.log(ul.innerHTML);
+      console.log(ul.innerText);
+    </script>
+  </body>
+</html>

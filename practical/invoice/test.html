@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const getRandomId = (min = 0, max = 500000) => {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        const num = Math.floor(Math.random() * (max - min + 1)) + min;
+        return num.toString().padStart(6, "0");
+      };
+
+      console.log(getRandomId());
+
+      function today() {
+        let d = new Date();
+        let date = d.getDate().toString().padStart(2, "0");
+        let month = (d.getMonth() + 1).toString().padStart(2, "0");
+        let year = d.getFullYear();
+        return `${date}/${month}/${year}`;
+      }
+
+      function createTd(inputText) {
+        let td = document.createElement("td");
+        let text = document.createTextNode(inputText);
+        td.append(text);
+        return td;
+      }
+
+      let tr = document.createElement(tr);
+
+      tr.append(createTd("Hello"));
+      tr.append(createTd("World"));
+      tr.append(createTd("San"));
+      tr.append(createTd("Kyi"));
+      tr.append(createTd("Tar"));
+      console.log(tr);
+    </script>
+  </body>
+</html>

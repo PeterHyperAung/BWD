@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Practical</title>
+    <style>
+      .box {
+        margin-top: 100px;
+        text-align: center;
+      }
+      fieldset {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <form action="" id="controlForm">
+        <fieldset>
+          <legend>Text Control</legend>
+
+          <label for="text">Text</label>
+          <input type="text" name="" id="text" required />
+
+          <label for="color">Color</label>
+          <input type="color" name="" id="color" />
+
+          <label for="fontSize">Font Size</label>
+          <input
+            type="range"
+            name=""
+            id="fontSize"
+            min="10"
+            max="100"
+            value="10"
+          />
+          <select name="" id="fontFamily">
+            <option value="Arial Black">Arial</option>
+            <option value="Book Antiqua Regular">Book Antiqua</option>
+            <option value="EMUI T9 Regular">EMUI T9</option>
+            <option value="Ubuntu">Ubuntu</option>
+          </select>
+          <button id="">Run</button>
+        </fieldset>
+      </form>
+      <p id="output">Min Ga Lar Par</p>
+    </div>
+
+    <script>
+      let text = document.getElementById("text");
+      let color = document.getElementById("color");
+      let fontSize = document.getElementById("fontSize");
+      let fontFamily = document.getElementById("fontFamily");
+      let output = document.getElementById("output");
+
+      // text.onkeyup = function () {
+      //   output.innerHTML = this.value;
+      // };
+
+      // color.addEventListener("change", function () {
+      //   output.style.color = this.value;
+      // });
+
+      // fontSize.addEventListener("change", function () {
+      //   output.style.fontSize = this.value + "px";
+      // });
+
+      // fontFamily.onchange = function () {
+      //   output.style.fontFamily = this.value;
+      // };
+
+      document
+        .getElementById("controlForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          output.innerHTML = text.value;
+          output.style.color = color.value;
+          output.style.fontSize = fontSize.value + "px";
+          output.style.fontFamily = fontFamily.value;
+          // document.forms[0].reset();
+          this.reset();
+        });
+    </script>
+  </body>
+</html>

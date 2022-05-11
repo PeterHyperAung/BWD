@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let case1 = 50;
+      let case2 = 60;
+      let case3 = 45;
+
+      // if you use &&, all the conditions must be true
+      if (case1 > 60 && case2 > 60 && case3 > 60) {
+        console.log("You get admission to school");
+      }
+
+      let busNo = 20;
+
+      // if you use ||, one of the conditions must be true
+      if (busNo === 65) {
+        console.log(`You can go to school by YBS bus NO.${busNo}`);
+      } else {
+        console.log(`You can't go to school by YBS NO.${busNo}`);
+      }
+
+      let x;
+
+      if (!true) {
+        console.log("I'm true");
+        x = 5;
+      } else {
+        console.log("I'm failed");
+        x = 10; // block scope
+      }
+
+      // console.log(x);
+
+      function test() {
+        console.log("aa");
+        return "I'm return";
+        console.log("bb");
+        console.log("cc");
+        console.log("dd");
+      }
+
+      function checkResult(mark) {
+        if (mark < 40) {
+          return "Fail the examination";
+        } else if (mark >= 80) {
+          return "Pass with Distinction";
+        } else if (mark >= 40) {
+          return "Pass the exam";
+        }
+        return "I'm else";
+      }
+    </script>
+  </body>
+</html>

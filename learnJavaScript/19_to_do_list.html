@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .container {
+        margin-top: 10px;
+        width: 300px;
+      }
+      input {
+        width: 100%;
+        padding: 5px 10px;
+        font-size: 1rem;
+      }
+      button {
+        width: 50%;
+        padding: 7px 10px;
+        background-color: #6c56ff;
+        border: none;
+        font-size: 1rem;
+        color: #fff;
+      }
+      button:active {
+        background-color: #5f4cda;
+      }
+      ul {
+        margin-bottom: 10px;
+      }
+      li {
+        list-style-position: inside;
+        margin-bottom: 7px;
+      }
+      li span {
+        display: inline-block;
+        width: 65%;
+      }
+      h1 {
+        color: #333;
+        margin: 10px 0;
+      }
+      .done {
+        background-color: #ff3c63;
+        width: 25%;
+      }
+      .done:active {
+        background-color: crimson;
+      }
+      .btn-group {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      .clear-btn {
+        width: 50%;
+        background-color: #ff6b51;
+      }
+      .clear-btn:active {
+        background-color: #e45f48;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>To Do List</h1>
+    <div class="container">
+      <ul id="list"></ul>
+      <input
+        type="text"
+        name="text"
+        autofocus
+        id="text"
+        class="text"
+        placeholder="Write your text here..."
+      />
+      <div class="btn-group">
+        <button type="button" id="button" onclick="add();">Add</button
+        ><button class="clear-btn" onclick="clearAll();">Clear All</button>
+      </div>
+    </div>
+
+    <script>
+      // selection
+      let input = document.getElementById("text");
+      let ul = document.getElementById("list");
+      let button = document.getElementById("button");
+      let done = document.getElementsByClassName("done");
+      let arr1 = [];
+      let arr2 = [];
+      function display() {
+        for (let i = 0; i < localStorage.length; i++) {
+          ul.innerHTML += `<li><span>${localStorage.getItem(
+            i
+          )}</span> <button onclick="deleteEach(${i})" class="done">Delete</button> </li>`;
+        }
+      }
+      display();
+
+      function deleteEach(i) {
+        done = document.getElementsByClassName("done");
+        ul.innerHTML = "";
+        localStorage.removeItem(i);
+        reAddItems();
+      }
+
+      function add() {
+        if (input.value == "") {
+          window.alert("Please enter a text");
+        } else {
+          ul.innerHTML += `<li><span>${input.value}</span> <button onclick="deleteEach(${localStorage.length})" class="done">Delete</button> </li>`;
+          localStorage.setItem(localStorage.length, input.value);
+          input.value = "";
+          done = document.getElementsByClassName("done");
+        }
+      }
+
+      function clearAll() {
+        localStorage.clear();
+        ul.innerHTML = "";
+      }
+
+      function reAddItems() {
+        arr1 = [];
+        arr2 = [];
+        for (let i of Object.keys(localStorage)) {
+          arr1.push(parseInt(i));
+        }
+        arr1.sort();
+        for (let i of arr1) {
+          arr2.push(localStorage.getItem(i));
+        }
+        localStorage.clear();
+        for (let i of arr2) {
+          localStorage.setItem(localStorage.length, i);
+        }
+        display();
+      }
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") add();
+      });
+    </script>
+  </body>
+</html>

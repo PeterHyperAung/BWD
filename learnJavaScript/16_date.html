@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date Object</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      let d = new Date();
+      console.log(d);
+      console.log(typeof d);
+      console.log(d.getDate());
+      console.log(d.getDay());
+      console.log(d.getFullYear());
+      console.log(d.getHours());
+      console.log(d.getMilliseconds());
+      console.log(d.getMinutes());
+      console.log(d.getMonth());
+      console.log(d.getSeconds());
+      console.log(d.getTime());
+      console.log(d.getUTCDate());
+
+      document.write(`<h3>${d.getHours()} : ${d.getMinutes()}</h3>`);
+
+      console.log(d.toString());
+      console.log(d.toDateString());
+      console.log(d.toTimeString());
+
+      console.log(d.toLocaleString());
+      console.log(d.toLocaleString("en-AU"));
+      console.log(d.toLocaleDateString("en-US"));
+      console.log(d.toLocaleTimeString("ko-KR"));
+
+      let d2 = new Date(2025, 0, 01);
+      console.log(d2);
+      console.log(new Date("2025-01-01"));
+
+      let d3 = new Date(new Date().getMilliseconds());
+      console.log(d3);
+
+      let d4 = new Date();
+      console.log(d);
+
+      d4.setDate(27);
+      console.log(d4);
+
+      let d5 = new Date();
+      console.log(d5);
+      let currentHour = d5.getHours();
+      d5.setHours(currentHour + 1500);
+      console.log(d5);
+
+      let d6 = new Date();
+      console.log(d6);
+      d6.setMonth(d6.getMonth() + 4);
+      console.log(d6);
+
+      let d7 = new Date();
+      console.log(d7);
+      let totalLessonHours = 50;
+      let learnHourPerDay = 2;
+      let dayToFinish = totalLessonHours / learnHourPerDay;
+      d7.setDate(d7.getDate() + dayToFinish);
+      console.log(d7);
+    </script>
+  </body>
+</html>
